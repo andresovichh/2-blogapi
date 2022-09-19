@@ -9,10 +9,10 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
+from pathlib import Path
+import os
 from dotenv import load_dotenv
 load_dotenv()
-import os
-from pathlib import Path
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -60,15 +60,15 @@ MIDDLEWARE = [
 CORS_ORIGIN_WHITELIST = (
     "http://localhost:3000",
     "http://localhost:8000",
-    )
+)
 
 CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"]
 
-REST_FRAMEWORK = { # new
-                  "DEFAULT_PERMISSION_CLASSES": [
-                      "rest_framework.permissions.AllowAny",
-                      ],
-                  }
+REST_FRAMEWORK = {  # new
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.IsAuthenticated",
+    ],
+}
 
 ROOT_URLCONF = 'django_project.urls'
 

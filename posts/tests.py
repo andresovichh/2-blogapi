@@ -4,6 +4,7 @@ from django.test import TestCase
 from .models import Post
 # Create your tests here.
 
+
 class BlogTests(TestCase):
     @classmethod
     def setUpTestData(cls):
@@ -19,7 +20,7 @@ class BlogTests(TestCase):
             title="A good title",
             body="Nice body content",
         )
-        
+
     def test_post_model(self):
         self.assertEqual(self.post.author.username, "testuser")
         self.assertEqual(self.post.title, "A good title")

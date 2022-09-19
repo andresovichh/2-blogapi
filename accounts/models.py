@@ -5,6 +5,8 @@ from django.contrib.auth.models import AbstractUser
         The models.py file is where we define the data
         we want in our database.
 """
+
+
 class CustomUser(AbstractUser):
     """ Creating a custom user class"""
-    name = models.CharField(null=True,blank=True, max_length=100)
+    name = models.CharField(null=True, blank=True, max_length=100)
