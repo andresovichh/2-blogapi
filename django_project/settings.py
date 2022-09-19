@@ -34,26 +34,26 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-"django.contrib.admin",
-"django.contrib.auth",
-"django.contrib.contenttypes",
-"django.contrib.sessions",
-"django.contrib.messages",
-"django.contrib.staticfiles",
-"django.contrib.sites", # new
-# 3rd-party apps
-"rest_framework",
-"corsheaders",
-"rest_framework.authtoken",
-"allauth", # new
-"allauth.account", # new
-"allauth.socialaccount",
-"dj_rest_auth",
-"dj_rest_auth.registration",
-# new
-# Local
-"accounts.apps.AccountsConfig",
-"posts.apps.PostsConfig",
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "django.contrib.sites",  # new
+    # 3rd-party apps
+    "rest_framework",
+    "corsheaders",
+    "rest_framework.authtoken",
+    "allauth",  # new
+    "allauth.account",  # new
+    "allauth.socialaccount",
+    "dj_rest_auth",
+    "dj_rest_auth.registration",
+    # new
+    # Local
+    "accounts.apps.AccountsConfig",
+    "posts.apps.PostsConfig",
 ]
 
 MIDDLEWARE = [
@@ -78,7 +78,7 @@ REST_FRAMEWORK = {  # new
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.IsAuthenticated",
     ],
-    "DEFAULT_AUTHENTICATION_CLASSES": [ # new
+    "DEFAULT_AUTHENTICATION_CLASSES": [  # new
         "rest_framework.authentication.SessionAuthentication",
         "rest_framework.authentication.TokenAuthentication",
     ],
@@ -87,20 +87,20 @@ REST_FRAMEWORK = {  # new
 ROOT_URLCONF = 'django_project.urls'
 
 TEMPLATES = [
-{
-"BACKEND": "django.template.backends.django.DjangoTemplates",
-"DIRS": [],
-"APP_DIRS": True,
-"OPTIONS": {
-"context_processors": [
-"django.template.context_processors.debug",
-"django.template.context_processors.request",
-"django.contrib.auth.context_processors.auth",
-"django.contrib.messages.context_processors.messages",
-"django.template.context_processors.request", # new
-],
-},
-},
+    {
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
+                "django.template.context_processors.request",  # new
+            ],
+        },
+    },
 ]
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
